@@ -39,10 +39,18 @@ public class StudentController {
         return students;
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/id/{id:\\d+}")
     public Student getById(@PathVariable Long id) {
         return students.stream()
                 .filter(student -> student.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+    }
+
+    @GetMapping("/name/{name:[a-zA-Z]+}")
+    public Student getByName(@PathVariable String name) {
+        return students.stream()
+                .filter(student -> student.getName().equalsIgnoreCase(name))
                 .findFirst()
                 .orElse(null);
     }
