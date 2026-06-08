@@ -54,4 +54,12 @@ public class StudentController {
                 .findFirst()
                 .orElse(null);
     }
+
+    @GetMapping("/email/{email:[a-zA-Z]+}")
+    public Student getByEmail(@PathVariable String email) {
+        return students.stream()
+                .filter(student -> student.getEmail().equalsIgnoreCase(email))
+                .findFirst()
+                .orElse(null);
+    }
 }
