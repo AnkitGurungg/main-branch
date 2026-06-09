@@ -39,6 +39,13 @@ public class StudentController {
         return students;
     }
 
+    @GetMapping("added-students")
+    public List<Student> getAddedStudents() {
+        students.add(new Student(4L, "Orton", "orton@gmail.com"));
+        students.add(new Student(5L, "Alice", "alice@gmail.com"));
+        return students;
+    }
+
     @GetMapping("/id/{id:\\d+}")
     public Student getById(@PathVariable Long id) {
         return students.stream()
