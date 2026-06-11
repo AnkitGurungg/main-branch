@@ -1,6 +1,9 @@
 name: Spring Boot CI
 
 on:
+  push:
+    branches:
+      - develop
   pull_request:
     branches:
       - develop
