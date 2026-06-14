@@ -9,6 +9,13 @@ on:
       - develop
 
 jobs:
+  hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Hello
+        run: echo "Hello from GitHub Actions"
+
   build:
     runs-on: ubuntu-latest
 
