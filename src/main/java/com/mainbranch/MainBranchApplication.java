@@ -11,7 +11,6 @@ public class MainBranchApplication {
         SpringApplication.run(MainBranchApplication.class, args);
         System.err.println("Bye World!");
         System.err.println("Welcome Back!");
-        j djv
     }
 
 }
