@@ -10,6 +10,7 @@ public class MainBranchApplication {
         System.err.println("Hello, World!");
         SpringApplication.run(MainBranchApplication.class, args);
         System.err.println("Bye World!");
+        System.err.println("Welcome Back!");
     }
 
 }
