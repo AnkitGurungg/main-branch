@@ -7,10 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MainBranchApplication {
 
     public static void main(String[] args) {
-        System.err.println("Hello, World!");
+        System.out.println("Hello, World!");
         SpringApplication.run(MainBranchApplication.class, args);
-        System.err.println("Bye World!");
-        System.err.println("Welcome Back!");
+        System.out.println("Bye, World!");
+        System.out.println("Welcome Back!");
     }
 
 }
