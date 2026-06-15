@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 @RequestMapping("/api/students")
 public class StudentController {
@@ -15,6 +18,7 @@ public class StudentController {
     static List<Student> students = new ArrayList<>();
 
     static {
+        log.info("Started inserting users.");
         Student student1 = new Student();
         student1.setId(1L);
         student1.setName("John");
@@ -32,10 +36,12 @@ public class StudentController {
         student3.setId(3L);
         student3.setEmail("bob@example.com");
         students.add(student3);
+        log.info("Finished inserting users.");
     }
 
     @GetMapping
     public List<Student> getAll() {
+        log.info("No of fetched students {}", "ALL_USERS");
         return students;
     }
 
